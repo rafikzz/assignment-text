@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Condensed:wght@400;500&family=Inter:wght@400&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Slider With Acoordian</title>
+</head>
+
+<body>
+    <main class="main-content">
+        <section class="video-tab">
+            <div class="container">
+                <div class="swiper video-swiper-container">
+                    <div class="video-swiper__row">
+                        <div class="video-swiper__col-video col-lg-7">
+                            <div class="video-swiper">
+                                <div class="swiper-wrapper ">
+                                    <div class="swiper-slide">
+                                        <div class="video-container">
+                                            <iframe src="https://player.vimeo.com/video/76979871?background=1"
+                                                frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="video-container">
+                                            <video src="https://into-the-program.com/uploads/sample_video02.mp4"
+                                                preload="none" muted></video>
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="video-container">
+                                            <video src="https://into-the-program.com/uploads/sample_video03.mp4"
+                                                preload="none" muted></video>
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="video-container">
+                                            <video src="https://into-the-program.com/uploads/sample_video03.mp4"
+                                            preload="none" muted></video>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-swiper__col-accordian col-lg-6">
+                            <div class="video-tab__title">
+                                It’s not magic,<br>
+                                It’s science
+                            </div>
+                            <div class="slider-accordion go-to-buttons">
+                                <div class="slider-accordion-item">
+                                    <button class="slider-accordion-header" data-slide="0">Lorem Ipsum</button>
+                                    <div class="slider-accordion-content">
+                                        <p>Lorem ipsum dolor sit amet consectetur. Euismod ultricies sed ipsum duis at
+                                            arcu sit urna proin. Erat feugiat diam pharetra nisl.</p>
+                                    </div>
+                                </div>
+                                <div class="slider-accordion-item">
+                                    <button class="slider-accordion-header" data-slide="1">Lorem Ipsum dolor</button>
+                                    <div class="slider-accordion-content">
+                                        <p>Lorem ipsum dolor sit amet consectetur. Euismod ultricies sed ipsum duis at
+                                            arcu sit urna proin. Erat feugiat diam pharetra nisl..</p>
+                                    </div>
+                                </div>
+                                <div class="slider-accordion-item">
+                                    <button class="slider-accordion-header" data-slide="2">Amet consectetur</button>
+                                    <div class="slider-accordion-content">
+                                        <p>Lorem ipsum dolor sit amet consectetur. Euismod ultricies sed ipsum duis at
+                                            arcu sit urna proin. Erat feugiat diam pharetra nisl.</p>
+                                    </div>
+                                </div>
+                                <div class="slider-accordion-item">
+                                    <button class="slider-accordion-header" data-slide="3">Tellus bibendum
+                                        sapien</button>
+                                    <div class="slider-accordion-content">
+                                        <p>Lorem ipsum dolor sit amet consectetur. Euismod ultricies sed ipsum duis at
+                                            arcu sit urna proin. Erat feugiat diam pharetra nisl.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-accordion__commont-note">
+                                <div class="slider-accordion__commont-note__title">
+                                    A friendly feminder
+                                </div>
+                                <p>
+                                    Alcohol will still probably affect your well-being and your sleep. A healthy
+                                    breakfast and coffee should have you up and running by mid-morning.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- For Vimeo Control -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <script src="main.js" defer></script>
+
+</body>
+
+</html>
