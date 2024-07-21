@@ -373,7 +373,7 @@ body {
     center/23px auto no-repeat;
   border: 0;
   cursor: pointer;
-  right: 6px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -795,6 +795,9 @@ body {
 }
 
 @media (min-width: 992px) {
+  .header-notification__close_button{
+    right: 6px;
+  }
   .header {
     padding: 0 40px;
   }
