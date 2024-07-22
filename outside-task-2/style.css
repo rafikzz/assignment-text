@@ -40,6 +40,7 @@
 .video-container iframe,
 .video-container video {
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
@@ -144,15 +145,24 @@
   }
   .video-swiper__row {
     display: flex;
+    align-items: stretch; 
+  }
+  .video-swiper__col__container{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: stretch;
   }
   .video-swiper__col-video {
-    margin-bottom: 24px;
+    margin-bottom: 0;
     padding-right: 20px;
-    height: 100%;
+    height: auto; 
+    flex: 1 1 50%; 
   }
   .video-swiper__col-accordian {
     width: 100%;
-    height: 100%;
+    height: auto; 
+    flex: 1 1 100%; 
   }
   .video-container {
     border-radius: 16px;
@@ -168,7 +178,7 @@
   }
 
   .slider-accordion__commont-note {
-    align-self: flex-end;
+    margin-top: auto;
     padding-top: 32px;
   }
   .slider-accordion__commont-note p {

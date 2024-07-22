@@ -123,7 +123,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (parentItem) {
         var closeLinks = parentItem.querySelectorAll(".tab-link-js");
         closeLinks.forEach((link) => link.classList.remove("tab-link__active"));
+        closeLinks.forEach((link) => link.setAttribute("aria-selected",'false'));
+
         this.classList.add("tab-link__active");
+        this.setAttribute("aria-selected",'true');
+
         var closetTabPanel = parentItem.nextElementSibling;
         var closetTabPanelItem = closetTabPanel.querySelectorAll(
           ".tab__content__item"
@@ -245,8 +249,11 @@ largeSwiper.forEach((swiperElement, index) => {
 //         // Close all open accordion items within this accordion container
 //         accordionElement.querySelectorAll(".slider-accordion-item").forEach((item) => {
 //           item.classList.remove("active");
+//           item.setAttribute("aria-expanded",'false');;
 //         });
 //         this.closest(".slider-accordion-item").classList.add("active");
+//         this.closest(".slider-accordion-item").setAttribute("aria-expanded",'true');
+
 //       });
 //     });
 //   }
