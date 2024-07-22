@@ -1,11 +1,8 @@
-.swiper {
-  height: fit-content;
-}
 /* For Slider and Accordian  */
 
 .video-tab {
   background: #fff;
-  padding: 40px 28px;
+  margin: 40px 28px;
 }
 .video-swiper {
   width: 100%;
@@ -28,11 +25,13 @@
 
 .video-swiper .swiper-slide {
   width: 100%;
+  height: 100%;
 }
 
 .video-container {
+  height: 100%;
   position: relative;
-  padding-bottom: 56%;
+  padding-bottom: 56.5%;
   width: 100%;
   overflow: hidden;
 }
@@ -43,6 +42,8 @@
   z-index: -1;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
 }
@@ -132,7 +133,7 @@
 @media (min-width: 992px) {
   .video-tab {
     background: #fff;
-    padding: 75px 48px;
+    margin: 75px 48px;
   }
   .video-swiper {
     width: 100%;
@@ -144,8 +145,9 @@
     line-height: 64px;
   }
   .video-swiper__row {
-    display: flex;
-    align-items: stretch; 
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 20px;
   }
   .video-swiper__col__container{
     display: flex;
@@ -154,10 +156,8 @@
     justify-content: stretch;
   }
   .video-swiper__col-video {
+    aspect-ratio: 1 / 1;
     margin-bottom: 0;
-    padding-right: 20px;
-    height: auto; 
-    flex: 1 1 50%; 
   }
   .video-swiper__col-accordian {
     width: 100%;
@@ -190,57 +190,3 @@
   }
 }
 
-
-@media (min-width: 992px) {
-    .col-lg-1 {
-      flex: 0 0 8.33%;
-      max-width: 8.33%;
-    }
-    .col-lg-2 {
-      flex: 0 0 16.66%;
-      max-width: 16.66%;
-    }
-    .col-lg-3 {
-      flex: 0 0 25%;
-      max-width: 25%;
-    }
-    .col-lg-4 {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
-    .col-lg-5 {
-      flex: 0 0 41.66%;
-      max-width: 41.66%;
-    }
-    .col-lg-6 {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-    .col-lg-7 {
-      flex: 0 0 58.33%;
-      max-width: 58.33%;
-    }
-    .col-lg-8 {
-      flex: 0 0 66.66%;
-      max-width: 66.66%;
-    }
-    .col-lg-9 {
-      flex: 0 0 75%;
-      max-width: 75%;
-    }
-    .col-lg-10 {
-      flex: 0 0 83.33%;
-      max-width: 83.33%;
-    }
-    .col-lg-11 {
-      flex: 0 0 91.66%;
-      max-width: 91.66%;
-    }
-    .col-lg-12 {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-    .overflow-md-y-hidden {
-      overflow-y: auto;
-    }
-  }
