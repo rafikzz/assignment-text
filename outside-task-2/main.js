@@ -52,10 +52,14 @@ document
         .querySelectorAll(".go-to-buttons .slider-accordion-item")
         .forEach((button) => {
           button.classList.remove("active");
+          button.setAttribute('aria-expanded','false')
         });
-      container
+        let parentCOntainer= container
         .querySelector(`.go-to-buttons button[data-slide="${index}"]`)
-        .parentElement.classList.add("active");
+        .parentElement;
+        parentCOntainer.classList.add("active");
+        parentCOntainer.setAttribute('aria-expanded','true')
+
     }
     // Initial active button setup
     updateActiveButton(mySwiper.realIndex);
