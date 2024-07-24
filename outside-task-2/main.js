@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .forEach((container, index) => {
       const mySwiper = new Swiper(container.querySelector(".video-swiper"), {
         autoplay: true,
-        spaceBetween:20,
+        spaceBetween: 20,
         loop: false,
         autoWidth: true,
         slidesPerView: 1,
@@ -14,15 +14,23 @@ document.addEventListener("DOMContentLoaded", function () {
           },
           transitionEnd: function () {
             let activeIndex = this.activeIndex;
-            let activeSlide =
-              container.querySelectorAll(".swiper-slide")[activeIndex];
-              let playOrPauseButton = container.querySelector(".pause-button-js");
-              if(playOrPauseButton && !playOrPauseButton.classList.contains('paused'))
-              {
-                playVideo(activeSlide);
-              }
+            let activeSlide = container;
+            if (container.querySelector(".go-to-buttons ")) {
+              container
+                .querySelector(".go-to-buttons ")
+                .style.setProperty("--progress", 0);
+            }
+            let playOrPauseButton = container.querySelector(".pause-button-js");
+            this.closest(".go-to-buttons").style.setProperty("--progress", 0);
+
+            if (
+              playOrPauseButton &&
+              !playOrPauseButton.classList.contains("paused")
+            ) {
+              playVideo(activeSlide);
+            }
           },
-         
+
           autoplayTimeLeft(s, time, progress) {
             container
               .querySelector(".go-to-buttons ")
@@ -74,9 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
             mySwiper.autoplay.stop();
             pauseAllVideos(container);
           } else {
-            var timeLeft =mySwiper.autoplay.timeLeft;
+            var timeLeft = mySwiper.autoplay.timeLeft;
             mySwiper.autoplay.start();
-            mySwiper.autoplay.timeLeft =timeLeft;
+            mySwiper.autoplay.timeLeft = timeLeft;
             playOrPauseButton.classList.remove("paused");
             let activeSlide =
               container.querySelectorAll(".swiper-slide")[mySwiper.activeIndex];
