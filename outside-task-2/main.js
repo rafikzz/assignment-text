@@ -13,15 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
             pauseAllVideos(container);
           },
           transitionEnd: function () {
-            let activeIndex = this.activeIndex;
-            let activeSlide = container;
+            let activeSlide =
+              container.querySelectorAll(".swiper-slide")[mySwiper.activeIndex];
             if (container.querySelector(".go-to-buttons ")) {
               container
                 .querySelector(".go-to-buttons ")
                 .style.setProperty("--progress", 0);
             }
             let playOrPauseButton = container.querySelector(".pause-button-js");
-            this.closest(".go-to-buttons").style.setProperty("--progress", 0);
 
             if (
               playOrPauseButton &&
@@ -29,6 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
             ) {
               playVideo(activeSlide);
             }
+          },
+          activeIndexChange: function () {
+            container
+              .querySelector(".go-to-buttons")
+              .style.setProperty("--progress", 0);
           },
 
           autoplayTimeLeft(s, time, progress) {
