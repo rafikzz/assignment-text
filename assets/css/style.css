@@ -476,8 +476,10 @@ body {
   transition: right 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   z-index: 10;
   padding: 64px 0;
+  visibility: hidden;
 }
 .header__mobile-sidemenu--open {
+  visibility: visible;
   right: 0;
   pointer-events: auto;
 }
@@ -631,6 +633,7 @@ body {
   pointer-events: none;
   left: 100%;
   opacity: 0;
+  visibility: hidden;
   transition: left 0.3s ease, opacity 0.3s ease;
 }
 
@@ -638,6 +641,8 @@ body {
   left: 0;
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
+
 }
 
 .mobile-submenu__header {
@@ -864,6 +869,7 @@ body {
     max-height: calc(100vh - var(--current-header-height));
     z-index: 11;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     padding: 50px 0;
     border-top: 1px var(--round-border-color) solid;
@@ -872,6 +878,8 @@ body {
   .menu-list__item:hover .menu-list__megamenu {
     top: 100%;
     opacity: 1;
+    visibility: visible;
+
     pointer-events: auto;
   }
   .mega-menu__leftbox {
